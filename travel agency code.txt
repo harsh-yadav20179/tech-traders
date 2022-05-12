@@ -1,0 +1,76 @@
+	/*You manage a travel agency, and you want your n drivers to input their following details:
+
+Name of the driver
+Driving License Number
+Route 
+Kms
+Your program should be able to take n as input (or you can take n=3 for simplicity),
+ and your drivers will start inputting their details one by one. Your program should 
+ print details of the drivers in a beautiful fashion. For this task, you have to use 
+ Structure only. These four inputs: name, driving license number, route, and km information 
+ will be struct members.
+*/
+#include<stdio.h>
+#include<string.h>
+struct travel_agency
+{
+	char name[30];
+    int	licence_no;
+    char route[50];
+    int kms;
+} d1,d2,d3;
+int main()
+{  char choice,A,B,C;
+printf(" if you are driver number 1 press A to fillup your details \n if you are driver number 2 press B to fillup your details \n if you are driver number 3 press C to fillup your details \n");
+scanf("%c",&choice);
+switch(choice)
+{
+ case('A'):
+ {
+ printf(" hello driver no 1\n");
+ printf("enter your name please :");
+ scanf(" %s",d1.name);
+ printf("enter youR licence no :");
+ scanf("%d",&d1.licence_no);
+ printf("enter the route followed:");
+ scanf(" %s",d1.route);
+ printf("enter the kms travelled :");
+ scanf("%d",&d1.kms);
+ printf("\n   your details are as follows \n");
+ printf(" name = %s\nlisence number = %d\nroute followed = %s\nkms travelled = %d\n",d1.name,d1.licence_no,d1.route,d1.kms);
+ break;
+}
+ case('B'):
+ {
+  printf(" hello driver no 2\n");
+ printf("enter your name please :");
+ scanf(" %s",d2.name);
+ printf("enter you licence no :");
+ scanf("%d",&d2.licence_no);
+ printf("enter the route followed:");
+ scanf(" %s",d2.route);
+ printf("enter the kms travelled :");
+ scanf("%d",&d2.kms);
+ printf("\n   your details are as follows \n");
+ printf("name = %s\nlisence number = %d\nroute followed = %s\nkms travelled = %d\n",d2.name,d2.licence_no,d2.route,d2.kms);
+ break;
+}
+case('C'):
+{
+
+  printf(" hello driver no 3\n");
+ printf("enter your name please :");
+ scanf(" %s",d3.name);
+ printf("enter you licence no :");
+ scanf("%d",&d3.licence_no);
+ printf("enter the route followed:");
+ scanf(" %s",d3.route);
+ printf("enter the kms travelled :");
+ scanf("%d",&d3.kms);
+ printf("\n   your details are as follows \n");
+ printf("name = %s\nlisence number = %d\nroute followed = %s\nkms travelled = %d\n",d3.name,d3.licence_no,d3.route,d3.kms);
+ break;
+}
+}
+	return 0;
+}
